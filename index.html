@@ -329,7 +329,10 @@
         result.innerHTML = "Name should contain only letters and spaces.";
         return;
     }
-    
+    if (!email.match(/^([A-Za-z0-9_\.]+)@([a-zA-Z0-9]+).([a-zA-Z]+)([a-zA-Z]+)?$/)) {
+        result.innerHTML = "Email should be correctly entered";
+        return;
+    }
     if (message.length < 10) {
         result.innerHTML = "Message should be at least 10 characters long.";
         return;
