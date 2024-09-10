@@ -81,7 +81,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-img">
-                            <img src="img/nikhil3 (1).jpg" alt="Image">
+                            <img src="img/nikhilrajpk.jpg" alt="Image">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -305,6 +305,7 @@
         <!-- script for contacts -->
         <script>
             document.getElementById('contactForm').addEventListener('submit', function(e) {
+               
     e.preventDefault();
     
     const form = e.target;
@@ -341,7 +342,9 @@
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    result.innerHTML = "Please wait...";
+    result.innerHTML = "please wait...."
+    let btn = document.getElementById('sendMessageButton')
+    btn.innerHTML = "success";
 
     fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -369,7 +372,9 @@
             result.style.display = "none";
         }, 3000);
     });
+
 });
+
         </script>
 
         <!-- script for contact ends -->
